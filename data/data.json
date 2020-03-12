@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "name": "alegría",
+        "image": "./data/images/happyOne.jpg",
+        "description": "Sentimiento agradable ante una persona, deseo o cosa. Nos empuja a hacer cosas. Ejemplos de alegría son: merendar tus galletas preferidas, ver los regalos la mañana de Reyes Magos....¿se te ocurre alguno más?"
+    },
+    {
+        "id": "1",
+        "name": " alegría",
+        "image": "./data/images/happyTwo.jpg",
+        "description": "Sentimiento agradable ante una persona, deseo o cosa. Nos empuja a hacer cosas. Ejemplos de alegría son: merendar tus galletas preferidas, ver los regalos la mañana de Reyes Magos....¿se te ocurre alguno más?"
+    },
+    {
+        "id": "2",
+        "name": "asco",
+        "image": "./data/images/disgustOne.jpg",
+        "description": "Desagrado respecto a algo o alguien. Nos hace alejarnos. La situación más típica en los más pequeños se produce ante determinados alimentos que, al provocarles asco, rechazan de forma tajante"
+    },
+    {
+        "id": "2",
+        "name": "asco",
+        "image": "./data/images/disgustTwo.jpg",
+        "description": "Desagrado respecto a algo o alguien. Nos hace alejarnos. La situación más típica en los más pequeños se produce ante determinados alimentos que, al provocarles asco, rechazan de forma tajante"
+    },
+    {
+        "id": "3",
+        "name": "enfado",
+        "image": "./data/images/angryOne.jpg",
+        "description": "Cuando las cosas no salen como queremos. Nos impulsa a hacer algo para resolver un problema. Son multitud los momentos de enfado de un niño: cuando los mandamos a dormir, cuando tienen que recoger, cuando apagamos la TV..."
+    },
+    {
+        "id": "3",
+        "name": "enfado",
+        "image": "./data/images/angryTwo.jpg",
+        "description": "Cuando las cosas no salen como queremos. Nos impulsa a hacer algo para resolver un problema. Son multitud los momentos de enfado de un niño: cuando los mandamos a dormir, cuando tienen que recoger, cuando apagamos la TV..."
+    },
+    {
+        "id": "4",
+        "name": "miedo",
+        "image": "./data/images/fearOne.jpg",
+        "description": "Inseguridad anticipada ante un peligro, real o imaginario. Nos ayuda a la supervivencia ya que nos hace actuar con precaución. El encuentro con algunos animales o con personas desconocidas pueden ser ejemplos de situaciones de temor"
+    },
+    {
+        "id": "4",
+        "name": "miedo",
+        "image": "./data/images/fearTwo.jpg",
+        "description": "Inseguridad anticipada ante un peligro, real o imaginario. Nos ayuda a la supervivencia ya que nos hace actuar con precaución. El encuentro con algunos animales o con personas desconocidas pueden ser ejemplos de situaciones de temor"
+    },
+    {
+        "id": "5",
+        "name": "sorpresa",
+        "image": "./data/images/surpriseOne.jpg",
+        "description": "Asombro, desconcierto. Nos ayuda a comprender algo nuevo, porque nos hace buscar respuestas ante lo desconocido. Favorece la atención, la exploración y el interés o la curiosidad"
+    },
+    {
+        "id": "5",
+        "name": "sorpresa",
+        "image": "./data/images/surpriseTwo.jpg",
+        "description": "Asombro, desconcierto. Nos ayuda a comprender algo nuevo, porque nos hace buscar respuestas ante lo desconocido. Favorece la atención, la exploración y el interés o la curiosidad"
+    },
+    {
+        "id": "6",
+        "name": "tristeza",
+        "image": "./data/images/sadOne.jpg",
+        "description": "Sentimiento de pena asociado a una pérdida real o imaginada. Nos hace pedir ayuda. Situaciones en las que los niños pierden alguno de sus juguetes preferidos o se enferman sus mascotas, son momentos de tristeza para ellos"
+    },
+    {
+        "id": "6",
+        "name": "tristeza",
+        "image": "./data/images/sadTwo.jpg",
+        "description": "Sentimiento de pena asociado a una pérdida real o imaginada. Nos hace pedir ayuda. Situaciones en las que los niños pierden alguno de sus juguetes preferidos o se enferman sus mascotas, son momentos de tristeza para ellos"
+    }
+]
