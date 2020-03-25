@@ -1,7 +1,8 @@
 'use strict';
 
-console.log('>> Ready :)');
+
 const list = document.querySelector('#memoryGame');
+const reset = document.querySelector('.header__reset');
 let id;
 
 function callData() {
@@ -32,20 +33,15 @@ const displayEmotions = (emotions) => {
         flipCard.appendChild(cardFront);
         flipCard.appendChild(cardBack);
         list.appendChild(flipCard)
-
-        // const elementLi = document.createElement('li');
-        // elementLi.innerHTML = `<p>${emotion.name}</p>`
-        // elementDiv.appendChild(elementLi);
     }
     const cards = document.querySelectorAll('.flipCard')
-    console.log(cards)
-    const array = Array.from(cards)
-    const event = (array) => {
-        for (let card of array) {
+    const arrayOfCards = Array.from(cards)
+    const event = (arrayOfCards) => {
+        for (let card of arrayOfCards) {
             card.addEventListener('click', flipCard)
         }
     }
-    event(array)
+    event(arrayOfCards)
 }
 const mixCards = myArray => {
     const result = myArray.sort(function () {
@@ -61,6 +57,7 @@ const flipCard = (e) => {
     const click = e.currentTarget;
     click.classList.add('flip');
 
+
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = click;
@@ -69,23 +66,44 @@ const flipCard = (e) => {
         secondCard = click;
         console.log(firstCard.id, secondCard.id)
     }
+    // }
     //Cards match
-    if (firstCard.id === secondCard.id) {
-        //it's a match
-        firstCard.removeEventListener('click', flipCard);
-        secondCard.removeEventListener('click', flipCard);
-        console.log('ey!')
+
+    // if (flipped.length < 2) {
+    //     return;
+    // }
+    if (firstCard.id !== secondCard.id) {
+        notMatch(firstCard, secondCard);
     } else {
-        //not a match
-        setTimeout(() => {
-            firstCard.classList.remove('flip');
-            secondCard.classList.remove('flip');
-        }, 1500);
+        match(flipped);
     }
 }
 
-
-
+const notMatch = (firstCard, secondCard) => {
+    console.log(firstCard.id, secondCard.id)
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+    }, 2000);
+}
+const match = (firstCard, secondCard) => {
+    firstCard.classList.add('match');
+    secondCard.classList.add('match')
+}
+//it's a match
+//         firstCard.removeEventListener('click', flipCard);
+//         secondCard.removeEventListener('click', flipCard);
+//            console.log('ey!')
+//     } else {
+//     //not a match
+//         console.log('not a match');
+//     }
+//   
+//     // }
+// }
 
 
 callData()
+reset.addEventListener('click', mixCards)
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Juego de emociones</title>
+  <link rel="icon" href="./favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <script src="https://kit.fontawesome.com/bf82408d8a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <input class="header__reset" type="button" value="Reiniciar juego" onclick="location.reload()"></input>
+    <a class=" header__linkHome" href="./index.html" title="pagina inicio"><i class="fas fa-home"></i></a>
+  </header>
+  <main class="mainWrapper">
+    <h1 class="wrapper__title">Empareja las emociones</h1>
+    <p class="wrapper__text">¿Quién está feliz?¿Y quien tiene asco?
+      <br />A ver si eres capaz de encontrar los personajes con las mismas emociones.</p>
+    <div class="wrapper__cards">
+      <ul class="memoryGame" id="memoryGame"></ul>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&#174; 2020</p>
+    <a class="footer__linkMe" href="https://marveramar.github.io/portfolio_MV/" target="blank" title="portfolio autora">
+      <img class="footer__linkMe--logo" src="styles/logo.jpg" alt="logo de la creadora" />
+    </a>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
