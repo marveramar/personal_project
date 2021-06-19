@@ -67,9 +67,16 @@
     background-color:white;
     color:purple;
 } 
+.header__reset:hover{
+    box-shadow: -1px 3px 5px purple; 
+    cursor:pointer;
+}
 .fas {
     color: white;
     font-size: 20px;
+}
+.fas:hover{
+    box-shadow: -1px 1px 5px purple; 
 }
 .mainWrapper {
     background-image:url("./fantastic_world2.png");
@@ -101,13 +108,10 @@
     height: 150px;
     width:100px;	
     margin: 10px;
-    transition: transform .5s;
-    transform-style: preserve-3d; 
+    transition: transform .7s;
+    transform-style: preserve-3d;  
+    cursor:default;
 }
-/* .flipCard-hover{
-    transform: rotateY(360deg);
-    transition-duration: 10s;
-} */
 
 .flipCard__front, .flipCard__back{
     border: 3px solid purple;
@@ -139,8 +143,6 @@
 }
 .flip{    
     transform: rotateY(180deg);
-    transform-style: preserve-3d;
-    transition:transform 2s; 
 }
 .footer {
     background: blue;
@@ -162,11 +164,24 @@
     width: 50px;
     height: 25px;
 }
+.win{
+    font-size: 40px;
+    font-family: "Indie Flower", cursive;
+    color: purple;
+    text-decoration-line: overline;
+animation-name: example;
+animation-duration: 5s;
+
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
 .hidden{
 	display: none;
 }
 .match{
-    background-color: black;
+   border-color: black;
 }
 
 

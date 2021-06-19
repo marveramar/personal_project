@@ -2,9 +2,18 @@
 
 
 const list = document.querySelector('#memoryGame');
-const reset = document.querySelector('.header__reset');
-let id;
+const reset = document.querySelector('#header__reset');
+const win = document.querySelector('.win');
 
+
+let id;
+let matchCounter = 0;
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+let cards;
+
+//function to get data
 function callData() {
     fetch("../data/data.json")
         .then(response => response.json())
@@ -12,6 +21,15 @@ function callData() {
         )
 }
 
+//function to mix cards
+const mixCards = myArray => {
+    const result = myArray.sort(function () {
+        return 0.5 - Math.random();
+    });
+    displayEmotions(result);
+};
+
+//function to display cards 
 const displayEmotions = (emotions) => {
     for (let emotion of emotions) {
         id = emotion.id;
@@ -34,7 +52,7 @@ const displayEmotions = (emotions) => {
         flipCard.appendChild(cardBack);
         list.appendChild(flipCard)
     }
-    const cards = document.querySelectorAll('.flipCard')
+    cards = document.querySelectorAll('.flipCard')
     const arrayOfCards = Array.from(cards)
     const event = (arrayOfCards) => {
         for (let card of arrayOfCards) {
@@ -43,64 +61,54 @@ const displayEmotions = (emotions) => {
     }
     event(arrayOfCards)
 }
-const mixCards = myArray => {
-    const result = myArray.sort(function () {
-        return 0.5 - Math.random();
-    });
-    displayEmotions(result);
-};
 
-let hasFlippedCard = false;
-let firstCard, secondCard;
-
+//function to flip cards
 const flipCard = (e) => {
-    const click = e.currentTarget;
+    let click = e.currentTarget;
+    if (lockBoard) return;
+    if (this === firstCard) return;
     click.classList.add('flip');
-
 
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = click;
+        return;
     } else {
         hasFlippedCard = false;
         secondCard = click;
-        console.log(firstCard.id, secondCard.id)
+        checkForMatch(firstCard, secondCard);
     }
-    // }
-    //Cards match
-
-    // if (flipped.length < 2) {
-    //     return;
-    // }
+}
+//function check Match
+const checkForMatch = (firstCard, secondCard) => {
     if (firstCard.id !== secondCard.id) {
         notMatch(firstCard, secondCard);
+
     } else {
-        match(flipped);
+        match(firstCard, secondCard);
+
     }
 }
 
+
 const notMatch = (firstCard, secondCard) => {
-    console.log(firstCard.id, secondCard.id)
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-    }, 2000);
+
+    }, 1500);
 }
+
 const match = (firstCard, secondCard) => {
+    firstCard.removeEventListener('click', flipCard);
     firstCard.classList.add('match');
+    secondCard.removeEventListener('click', flipCard);
     secondCard.classList.add('match')
+    matchCounter += 1;
+    if (matchCounter === (cards.length / 2)) {
+
+    }
 }
-//it's a match
-//         firstCard.removeEventListener('click', flipCard);
-//         secondCard.removeEventListener('click', flipCard);
-//            console.log('ey!')
-//     } else {
-//     //not a match
-//         console.log('not a match');
-//     }
-//   
-//     // }
-// }
 
 
 callData()

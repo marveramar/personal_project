@@ -17,7 +17,8 @@
 
 <body>
   <header class="header">
-    <input class="header__reset" type="button" value="Reiniciar juego" onclick="location.reload()"></input>
+    <input id="header__reset" class="header__reset" type="button" value="Reiniciar juego"
+      onclick="location.reload()"></input>
     <a class=" header__linkHome" href="./index.html" title="pagina inicio"><i class="fas fa-home"></i></a>
   </header>
   <main class="mainWrapper">
@@ -25,6 +26,7 @@
     <p class="wrapper__text">¿Quién está feliz?¿Y quien tiene asco?
       <br />A ver si eres capaz de encontrar los personajes con las mismas emociones.</p>
     <div class="wrapper__cards">
+      <h1 class=" win hidden">HAS GANADO</h1>
       <ul class="memoryGame" id="memoryGame"></ul>
     </div>
   </main>
